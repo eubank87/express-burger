@@ -2,3 +2,29 @@
 body{
     background-color: #dad;
 }
+
+#header, #cooking{
+    display: flex;
+    justify-content: center;
+}
+
+#header{
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#menu-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#create{
+    text-align: center;
+}

@@ -1,38 +1,56 @@
-<h1>Burgas!</h1>
+<div class="container-fluid" id="header">
+    <h1>Burgas!</h1>
+</div>
 
-<h2>Burger Menu:</h2>
+<div class="container-fluid" id="menu-container">
+    <div id="left">
+        <div>
+            <h2>Burger Menu:</h2>
+        </div>
+        <div>
+            <ol>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devour=true}}
+                {{/unless}}
+                {{/each}}
+            </ol>
+        </div>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    </div>
 
-<h2>Sold Out:</h2>
+    <div id="right">
+        <h2>Sold Out:</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+        <ol>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burgers/burger-block devour=false}}
+            {{/if}}
+            {{/each}}
+        </ol>
+    </div>
 
-<h2>Create a Burger</h2>
-<form class="create-form">
+</div>
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
 
-  <div class="form-group">
-    <label for="devoured">On the menu?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Sold Out!<br>
-    <input type="radio" name="devoured" value="0"> Available
-  </div>
+<div class="container-fluid" id="cooking">
+    <div id="create">
+        <h2>Create a Burger</h2>
+        <form class="create-form mb-3 container">
 
-  <button type="submit">Add Burger</button>
-</form>
+            <div class="form-group">
+                <label class="form-label" for="ca">Burger Name:</label>
+                <input type="text" id="ca" name="name" class="form-control" placeholder="The Say Cheese Burger">
+            </div>
+
+            <div class="form-group">
+                <label for="devoured">On the menu?</label><br>
+                <input type="radio" name="devoured" value="1" class="form-check-input" checked> Sold Out!<br>
+                <input type="radio" name="devoured" value="0" class="form-check-input"> Available
+            </div>
+
+            <button type="submit">Add Burger</button>
+        </form>
+    </div>
+</div>
