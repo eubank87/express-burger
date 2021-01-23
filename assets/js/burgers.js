@@ -1,3 +1,4 @@
+// this one!
 // Make sure to wait for handlebars attachment until DOM is loaded
 $(function(){
     $(".change-devour").on("click", function(e){
