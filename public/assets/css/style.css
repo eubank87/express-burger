@@ -17,9 +17,6 @@ body{
 #menu-container{
     display: flex;
     justify-content: space-evenly;
-    background-color: rgba(255, 255, 255, 0.945);
-    width: 80vw;
-    border-radius: 10px;
 }
 
 form{
@@ -34,4 +31,14 @@ form{
 
 ::placeholder{
     font-style: italic;
+}
+
+li{
+    font-size: 20px;
+}
+
+#right, #left{
+    background-color: rgba(255, 255, 255, 0.945);
+    border-radius: 10px;
+    padding: 1%;
 }
