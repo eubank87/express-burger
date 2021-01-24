@@ -1,5 +1,5 @@
 <div class="container-fluid" id="header">
-    <h1>Burgas!</h1>
+    <h1>Not Bob's Burgers!</h1>
 </div>
 
 <div class="container-fluid" id="menu-container">
@@ -39,12 +39,12 @@
         <form class="create-form mb-3 container">
 
             <div class="form-group">
-                <label class="form-label" for="ca">Burger Name:</label>
-                <input type="text" id="ca" name="name" class="form-control" placeholder="Say Cheese Burger">
+                {{!-- <label class="form-label" for="ca">Burger Name:</label> --}}
+                <input type="text" id="ca" name="name" class="form-control" placeholder="The Say Cheese Burger">
             </div>
 
             <div class="form-group">
-                <label for="devoured">On the menu?</label><br>
+                <label for="devoured" id="menu-label">Put it on the menu?</label><br>
                 <input type="radio" name="devoured" value="1" class="form-check-input" checked> Sold Out!<br>
                 <input type="radio" name="devoured" value="0" class="form-check-input"> Available
             </div>
